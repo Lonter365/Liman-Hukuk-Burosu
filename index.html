@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Ankara Avukat | Liman Hukuk Bürosu</title>
+  <meta name="description" content="Ankara'da uzman avukatlık hizmetleri. Vergi Hukuku, İcra ve İflas Hukuku, Kıymetli Evrak Hukuku, Sözleşme Hazırlama ve Profesyonel Danışmanlık. Liman Hukuk Bürosu ile güvenilir hukuki destek." />
+  <meta name="keywords" content="Ankara avukat, Vergi Hukuku, İcra ve İflas Hukuku, Kıymetli Evrak Hukuku, Sözleşme Hazırlama, Profesyonel Danışmanlık, Liman Hukuk Bürosu" />
+  <meta name="author" content="Liman Hukuk Bürosu" />
+  <!-- Faviconlar Başlangıç -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favico/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favico/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+  <!-- Faviconlar Bitiş -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sabit Sağ Kenar Butonları -->
+  <div style="position:fixed; top:50%; right:0; transform:translateY(-50%); z-index:9998; display:flex; flex-direction:column; gap:12px;">
+    <a href="#" onclick="showPage('appointment')" id="sideAppointmentBtn" style="background:#0066cc; color:#fff; padding:16px 24px; border-radius:8px 0 0 8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); text-decoration:none; display:block; margin-bottom:0;">Randevu Al</a>
+    <a href="https://wa.me/905400966106" target="_blank" style="background:#25D366; color:#fff; padding:14px 20px; border-radius:8px 0 0 8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); text-decoration:none; display:flex; align-items:center; gap:8px; font-size:15px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#25D366"/><path d="M16 6C10.477 6 6 10.477 6 16c0 2.042.613 3.938 1.665 5.523L6 26l4.62-1.613A9.956 9.956 0 0 0 16 26c5.523 0 10-4.477 10-10S21.523 6 16 6Zm5.13 13.13c-.22.62-1.28 1.22-1.77 1.3-.47.08-1.06.12-1.7-.11-.39-.14-.89-.29-1.53-.57-2.7-1.17-4.47-4.06-4.6-4.25-.13-.18-1.1-1.46-1.1-2.79 0-1.33.7-1.98.95-2.25.25-.27.55-.34.73-.34.18 0 .36.01.52.01.16 0 .4-.06.62.47.22.53.75 1.83.82 1.96.07.13.11.28.02.46-.09.18-.13.29-.25.45-.12.16-.26.36-.37.48-.12.12-.24.25-.1.48.13.23.58.96 1.25 1.56.86.77 1.59 1.01 1.82 1.13.23.12.36.1.49-.06.13-.16.56-.65.71-.87.15-.22.3-.18.5-.11.2.07 1.28.6 1.5.71.22.11.36.17.41.27.05.1.05.57-.15 1.17Z" fill="#fff"/></svg>
+      WhatsApp
+    </a>
+    <a href="#" onclick="showPage('ask')" style="background:#ff9800; color:#fff; padding:14px 20px; border-radius:8px 0 0 8px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.12); text-decoration:none; display:flex; align-items:center; gap:8px; font-size:15px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 0 0-7.07 17.07A10 10 0 1 0 12 2Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z"/></svg>
+      Avukata Sor
+    </a>
+  </div>
+
+  <!-- Cookie Consent Çerez Şeridi Başlangıç -->
+  <div id="cookieConsentBar" style="display:none;position:fixed;bottom:0;left:0;width:100%;background:rgba(34,34,34,0.98);color:#fff;z-index:9999;padding:18px 12px 18px 12px;box-shadow:0 -2px 16px rgba(0,0,0,0.12);font-size:15px;line-height:1.6;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;">
+      <span style="flex:1 1 320px;">Web sitemiz, kullanıcı deneyimini geliştirmek ve hizmetlerimizi iyileştirmek için çerezler kullanır. Detaylı bilgi için <a href="#" onclick="showPage('privacy');document.getElementById('cookieConsentBar').style.display='none';return false;" style="color:#ffd700;text-decoration:underline;">Gizlilik Politikası</a> ve <a href="#" onclick="showPage('kvkk');document.getElementById('cookieConsentBar').style.display='none';return false;" style="color:#ffd700;text-decoration:underline;">KVKK Bildirgesi</a>'ni inceleyebilirsiniz.</span>
+      <button id="cookieConsentAccept" style="background:#ffd700;color:#222;font-weight:700;border:none;padding:10px 28px;border-radius:6px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.10);font-size:15px;transition:background 0.2s;">Kabul Et</button>
+    </div>
+  </div>
+  <!-- Cookie Consent Çerez Şeridi Bitiş -->
+  
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="javascript:void(0)" onclick="showPage('home', event)" aria-label="Ana sayfa">
+          <img src="Liman Hukuk.png" alt="Liman Hukuk Logo" style="height:60px; display:block;" loading="lazy" />
+        </a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="menu-toggle" aria-label="Menüyü aç" onclick="toggleNav()">☰</button>
+      </div>
+      <nav id="mainNav">
+        <a onclick="showPage('home')" class="active">Ana Sayfa</a>
+        <a onclick="showPage('about')">Hakkımızda</a>
+        <a onclick="showPage('services')">Çalışma Alanlarımız</a>
+        <a onclick="showPage('ask')">Avukata Sor</a>
+        <a onclick="showPage('appointment')">Randevu</a>
+        <a onclick="showPage('contact')">İletişim</a>
+        <!-- Dil değiştirme butonları kaldırıldı -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Ana Sayfa -->
+    <div id="home" class="page active">
+      <section class="hero">
+        <h2>Liman Hukuk Bürosu</h2>
+        <p style="font-size:18px; color:#0033aa; font-weight:600;">Ankara'da Güvenilir ve Uzman Avukatlık Hizmeti</p>
+        <p style="font-size:15px; color:var(--muted); max-width:600px; margin:0 auto 18px auto;">Liman Hukuk Bürosu olarak, müvekkillerimize Vergi Hukuku, İcra ve İflas Hukuku, Kıymetli Evrak Hukuku ve Sözleşme Hazırlama başta olmak üzere birçok alanda profesyonel, şeffaf ve çözüm odaklı hukuki danışmanlık sunuyoruz. Tecrübeli ekibimizle, haklarınızı en iyi şekilde korumak için yanınızdayız.</p>
+        <div class="grid grid-4" style="margin: 30px auto 0 auto; max-width: 1100px;">
+          <div class="card">
+            <h3>✓ Deneyim</h3>
+            <p>20+ yıl hukuk sektöründe faaliyet göstermektedir.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Profesyonellik</h3>
+            <p>Ulusal ve uluslararası standartlara uygun hizmet sunmaktadır.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Güven</h3>
+            <p>Müşteri memnuniyeti ve gizliliği ilk önceliğimizdir.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Erişilebilirlik</h3>
+            <p>7/24 danışmanlık hizmeti sağlanmaktadır.</p>
+          </div>
+        </div>
+        <a onclick="showPage('appointment')" class="btn" style="margin-top:32px;">Randevu Al</a>
+      </section>
+    </div>
+
+    <!-- Hakkımızda -->
+    <div id="about" class="page">
+      <section>
+        <h2>Hakkımızda</h2>
+        <p>Liman Hukuk Bürosu, akademik ve genel hukuk alanlarında uzman ekibiyle hizmet verir. Müşterilerine güvenilir, profesyonel ve etik danışmanlık hizmeti sunmayı hedeflemektedir.</p>
+        <div class="grid grid-4" style="margin-top: 30px;">
+          <div class="card">
+            <h3>✓ Deneyim</h3>
+            <p>20+ yıl hukuk sektöründe faaliyet göstermektedir.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Profesyonellik</h3>
+            <p>Ulusal ve uluslararası standartlara uygun hizmet sunmaktadır.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Güven</h3>
+            <p>Müşteri memnuniyeti ve gizliliği ilk önceliğimizdir.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Erişilebilirlik</h3>
+            <p>7/24 danışmanlık hizmeti sağlanmaktadır.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Çalışma Alanları -->
+    <div id="services" class="page">
+      <section>
+        <h2>Çalışma Alanlarımız</h2>
+        <p>Uzmanlık alanlarımızda profesyonel hukuki destek sunuyoruz:</p>
+        <div class="grid grid-4" style="margin-top: 24px;">
+          <div class="card">
+            <h3>İdare Hukuku</h3>
+            <p>İdari işlemlere karşı itiraz ve dava takibi.</p>
+          </div>
+          <div class="card">
+            <h3>İş Hukuku</h3>
+            <p>Işçi ve işveren hakları, sözleşme danışmanlığı.</p>
+          </div>
+          <div class="card">
+            <h3>Ceza Hukuku</h3>
+            <p>Savunma hizmetleri ve ceza davaları takibi.</p>
+          </div>
+          <div class="card">
+            <h3>Vergi Hukuku</h3>
+            <p>Vergi davaları, vergi cezalarına itiraz ve danışmanlık.</p>
+          </div>
+          <div class="card">
+            <h3>İcra ve İflas Hukuku</h3>
+            <p>Alacak tahsili, icra takipleri ve iflas işlemleri.</p>
+          </div>
+          <div class="card">
+            <h3>Kıymetli Evrak Hukuku</h3>
+            <p>Çek, senet, bono işlemleri ve hukuki süreçler.</p>
+          </div>
+          <div class="card">
+            <h3>Sözleşme Hazırlama & Profesyonel Danışmanlık</h3>
+            <p>Her türlü sözleşmenin hazırlanması ve hukuki danışmanlık.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Makaleler -->
+    <div id="articles" class="page">
+      <!-- Makaleler bölümü kaldırıldı -->
+    </div>
+
+    <!-- Hesaplamalar -->
+    <!-- Hesaplama araçları kaldırıldı -->
+    </div>
+
+    <!-- Avukata Sor -->
+    <div id="ask" class="page">
+      <section>
+        <h2>Avukata Sor</h2>
+        <p>Hukuki sorularınızı buraya yazarak danışmanlık alabilirsiniz:</p>
+        <div class="card" style="max-width: 600px; margin-top: 24px;">
+          <form>
+            <label>Ad Soyad</label>
+            <input type="text" placeholder="Adınız ve soyadınız" required />
+            <label>Email Adresi</label>
+            <input type="email" placeholder="ornek@email.com" required />
+            <label>Telefonunuz</label>
+            <input type="tel" placeholder="+90 5XX XXX XXXX" />
+            <label>Sorunuz</label>
+            <textarea placeholder="Hukuki sorunuzu detaylı şekilde anlatınız..." required></textarea>
+            <label><input type="checkbox" required /> KVKK ve Gizlilik Politikasını onaylıyorum</label>
+            <button type="submit" class="btn" style="width: 100%; text-align: center;">Gönder</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Randevu -->
+    <div id="appointment" class="page">
+      <section>
+        <h2>Online Randevu Talep Et</h2>
+        <p>Avukatlarımız ile online veya yerinde görüşme randevusu oluşturun:</p>
+        <div class="card" style="max-width: 600px; margin-top: 24px;">
+          <form>
+            <label>Ad Soyad</label>
+            <input type="text" placeholder="Adınız ve soyadınız" required />
+            <label>Email Adresi</label>
+            <input type="email" placeholder="ornek@email.com" required />
+            <label>Telefon</label>
+            <input type="tel" placeholder="+90 5XX XXX XXXX" required />
+            <label>Tercih Ettiğiniz Tarih ve Saat</label>
+            <input type="datetime-local" required />
+            <label>Görüşme Türü</label>
+            <select style="width: 100%; padding: 10px 12px; margin-top: 6px; border: 1px solid var(--border); border-radius: 6px; background: var(--glass); color: var(--text);">
+              <option value="">Seçiniz...</option>
+              <option value="online">Online Görüşme</option>
+              <option value="offline">Ofiste Görüşme</option>
+              <option value="phone">Telefon Danışmanlığı</option>
+            </select>
+            <label>Notlar / Konu</label>
+            <textarea placeholder="Görüşme konusu hakkında detay yazınız..." required></textarea>
+            <button type="submit" class="btn" style="width: 100%; text-align: center;">Randevu Talebi Gönder</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- İletişim -->
+    <div id="contact" class="page">
+      <section>
+        <h2>İletişim Bilgileri</h2>
+        <div class="grid" style="margin-top: 24px;">
+          <div class="card">
+            <h3>📍 Adres</h3>
+            <p>Anıttepe Mah. GMK Bulvarı Yıldız Apt. No: 123 Kat:7 No:20 Çankaya Ankara<br>Liman Hukuk Bürosu Binası<br>06570 Ankara / TÜRKİYE</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.8245607634!2d32.854298!3d39.927105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sAn%C4%B1ttepe%20Mahallesi%2C%20GMK%20Bulvar%C4%B1%20Y%C4%B1ld%C4%B1z%20Apt.%20123%2F20%20%C3%87ankaya%2C%20Ankara!2s39.927105%2C32.854298!5e0!3m2!1str!2str!4v1702200000000" width="100%" height="300" style="border:0; border-radius: 6px; margin-top: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="card">
+            <h3>✉️ Email</h3>
+            <p><a href="omer.limon64@outlook.com" style="color: var(--accent-2); text-decoration: none;">omer.limon64@outlook.com</a><br></p>
+          </div>
+          <div class="card">
+            <h3>📞 Telefon</h3>
+            <p><a href="tel:+90 540 096 61 06" style="color: var(--accent-2); text-decoration: none;">+90 540 096 61 06</a><br></p>
+          </div>
+          <div class="card">
+            <h3>🕐 Çalışma Saatleri</h3>
+            <p>Pazartesi - Cuma: 09:00 - 18:00<br>Cumartesi: 09:00 - 13:00<br>Pazar: Kapalı</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- KVKK Bildirgesi -->
+    <div id="kvkk" class="page">
+      <section>
+        <h2>Gizlilik Bildirimi - KVKK Politikası</h2>
+        <div class="card" style="max-width: 900px; margin: 0 auto;">
+          <h3>Web Sitesi Gizlilik Sözleşmesi</h3>
+          <p>Bu internet sitesini ziyaret etmeniz ve bu site aracılığıyla sunulan bilgi / hizmetlerden yararlanmanız sırasında, size ve talep ettiğiniz bilgi / hizmetlere ilişkin elde ettiğimiz bilgilerin ne şekilde kullanılacağı ve korunacağı, işbu "Gizlilik Politikası"nda belirtilen şartlara tabidir. Bu internet sitesini ziyaret etmekle ve bu internet sitesi aracılığıyla sunduğumuz hizmetlerden yararlanmayı talep etmekle işbu "Gizlilik Politikası"nda belirtilen şartları kabul etmektesiniz.</p>
+          <h4>I. Kişisel verilerin korunması ve işlenmesi politikasının amacı</h4>
+          <p>Bugüne kadar Liman Hukuk Bürosu olarak verdiğimiz bilgi ve hizmetlerin hassasiyeti gereğince müşterilerimizden ya da müşteri adaylarımızdan gelen veriler gizli tutulmuş ve üçüncü kişilerle paylaşılmamıştır. Kişisel verilerin korunması, şirketimizin temel politikasıdır. Herhangi bir yasal düzenleme olmadan önce şirket ve iştiraklerimiz, kişisel verilerin gizliliğine önem vermiş ve bunu bir çalışma ilkesi olarak benimsemiştir, ayrıca çalışanların da bu ilke doğrultusunda çalışma talimatları bulunmaktadır. Kişisel Verilerin Korunması Kanunu’nun getirdiği bütün sorumluluklara uymayı da Liman Hukuk Bürosu olarak taahhüt ederiz. Liman Hukuk Bürosu kişisel verilerin korunmasına ilişkin prensipleri, iştiraklerimizi de kapsamaktadır.</p>
+          <h4>II. Kapsam ve Değişiklikler</h4>
+          <p>Liman Hukuk Bürosu tarafından hazırlanan bu politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu’na (“KVKK”) uygun olarak hazırlanmıştır. Sizlerden rızanızla ya da Kanunda sayılan diğer hukuka uygunluk gereği elde edilmiş veriler, sunmuş olduğumuz hizmetlerin daha kaliteli hale getirilmesi, sizlere sunulan hizmetlerin ve kalite politikamızın iyileştirilmesi amacıyla kullanılacaktır. Yine elimizdeki bazı veriler ise, kişisel olmaktan çıkarılmakta ve anonimleştirilmektedir. Bu veriler, istatistiki amaçlarla kullanılan verilerdir ve Kanun uygulamasına ve Politikamıza tabi değildir. Liman Hukuk Bürosu Kişisel Verilerin Korunması ve İşlenmesi Politikası”, müşterilerimizin, müşteri adaylarımızın, çalışanlarımız ile bizimle çözüm ortaklığı içinde çalışan şirketlerin müşterileri ve çalışanlarının ya da diğer kişilerin otomatik olarak elde edilen verilerinin korunmasını amaçlar ve bunlara ilişkin düzenlemeleri içerir. Liman Hukuk Bürosu politikamızı ve Yönetmeliğimizi, Kanuna uygun olmak ve kişisel verilerin daha iyi korunması şartı ile- değiştirme hakkına sahiptir.</p>
+          <h4>III. Kişisel Verilerin İşlenmesi ile İlgili Temel Kurallar</h4>
+          <ul>
+            <li><b>a) Hukuka ve dürüstlük kurallarına uygun olma:</b> Liman Hukuk Bürosu, topladığı ya da kendisine diğer şirketlerden gelen verilerin kaynağını sorgular ve bunların hukuka uygun ve dürüstlük kuralları çerçevesinde elde edilmesine önem verir.</li>
+            <li><b>b) Doğru ve gerektiğinde güncel olma:</b> Bünyemizde bulunan bütün verilerin doğru bilgi olmasına, yanlış bilgi içermemesine ve değişiklik olduğunda güncellenmesine önem veririz.</li>
+            <li><b>c) Belirli, açık ve meşru amaçlar için işlenme:</b> Sadece onay alınan ve hizmet sırasında gerekli olan veriler işlenir.</li>
+            <li><b>d) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma:</b> Veriler sadece işlendikleri amaçla sınırlı ve hizmetin gerektirdiği ölçüde kullanılır.</li>
+            <li><b>e) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme:</b> Veriler, yasal süreler dolduğunda silinir veya anonimleştirilir.</li>
+          </ul>
+          <h4>IV. Veri İşleme Amaçları</h4>
+          <p>Kişisel verileriniz, sözleşmenin kurulması ve müşterilere daha iyi hizmet sağlanması amacıyla toplanmakta ve işlenmektedir.</p>
+          <h4>V. Müşteri, Muhtemel Müşteri ve İş Ortakları Verisi</h4>
+          <p>Kişisel verileriniz, 6698 sayılı KVKK ve ilgili mevzuat kapsamında, veri sorumlusu sıfatı ile işlenmektedir. Kategori ve açıklamalar: Adı Soyadı, Adres, Telefon Numarası, E-Posta Adresi, müşteri yorumları, geri bildirimler, yarışma ve pazarlama programları, internet sitesi üyelik bilgileri.</p>
+          <h4>VI. Sözleşme İlişkisi ve Veri İşleme</h4>
+          <p>Sözleşme ilişkisi kurulmuşsa, toplanan kişisel veriler, müşterinin onayı alınmaksızın kullanılabilir. Ancak bu kullanım, sözleşme amacı doğrultusunda gerçekleşir.</p>
+          <h4>VII. İş ve Çözüm Ortakları Verileri</h4>
+          <p>İş ve çözüm ortakları ile veri paylaşımı hukuka uygun şekilde ve gizlilik taahhüdü ile yapılır.</p>
+          <h4>VIII. Reklam Amaçlı Veri İşleme</h4>
+          <p>Reklam amaçlı elektronik ileti gönderimi için açık onay alınır. Onay, yazılı veya elektronik ortamda alınabilir.</p>
+          <h4>IX. Hukuki Yükümlülükler</h4>
+          <p>Kişisel veriler, işlemenin ilgili mevzuatta açıkça belirtilmesi veya hukuki yükümlülüklerin yerine getirilmesi amacıyla ayrıca onay alınmadan işlenebilir.</p>
+          <h4>X. Özel Nitelikli Verilerin İşlenmesi</h4>
+          <p>Özel nitelikli kişisel veriler, sadece açık rıza ile ve Kurul tarafından belirlenen önlemler alınarak işlenir.</p>
+          <h4>XI. Otomatik Sistemlerle İşlenen Veriler</h4>
+          <p>Otomatik sistemlerle işlenen veriler, Kanuna uygun şekilde işlenir ve kişi aleyhine kullanılmaz.</p>
+          <h4>XII. Çerezler ve İnternet Kullanıcı Bilgileri</h4>
+          <p>Web sitemizde çerezler, kullanıcı deneyimini iyileştirmek ve istatistiksel analiz için kullanılmaktadır. Çerezler hakkında detaylı bilgi ve silme yöntemleri için tarayıcı ayarlarını kullanabilirsiniz.</p>
+          <h4>XIII. Kişisel Verilerin Yurt İçi ve Dışına Aktarılması</h4>
+          <p>Kişisel veriler, hizmetin görülebilmesi amacıyla iş ve çözüm ortakları ile paylaşılabilir. Kanunda belirlenen şartlara uygun olarak yurt içi ve yurt dışına aktarılabilir.</p>
+          <h4>XIV. İlgili Kişinin Hakları</h4>
+          <ul>
+            <li>Kişisel verilerinin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse bilgi talep etme</li>
+            <li>İşlenme amacını ve uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+            <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+            <li>Silinmesini veya yok edilmesini isteme</li>
+            <li>Aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+            <li>Otomatik sistemlerle analiz sonucu aleyhe bir durum çıkarsa itiraz etme</li>
+            <li>Kanuna aykırı işlenmesi sebebiyle zararın giderilmesini talep etme</li>
+          </ul>
+          <p>Başvurularınızı iletişim sayfasında yer alan bilgilerle, kimlik fotokopisi ile birlikte iadeli taahhütlü mektup ile iletebilirsiniz. Başvurularınız en geç 30 gün içinde cevaplanacaktır.</p>
+          <h4>XV. Gizlilik İlkesi</h4>
+          <p>Şirketimizdeki veriler gizlidir. Hiç kimse sözleşme ya da kanuna uygunluk olmaksızın başkaca hiçbir amaç için bu verileri kullanamaz, kopyalayamaz, çoğaltamaz, başkalarına aktaramaz, iş amaçları dışında kullanamaz.</p>
+          <h4>XVI. İşlem Güvenliği</h4>
+          <p>Kişisel verilerin korunması ve yetkisiz kişilerin eline geçmemesi için gerekli teknik ve idari bütün tedbirler alınmaktadır. Güvenliğe ilişkin önlemler sürekli olarak yenilenmekte ve geliştirilmektedir.</p>
+          <h4>XVII. Denetim</h4>
+          <p>Kişisel verilerin korunması konusunda gerekli iç ve dış denetimler yapılır.</p>
+          <h4>XVIII. İhlallerin Bildirimi</h4>
+          <p>Herhangi bir ihlal bildirildiğinde, Liman Hukuk Bürosu derhal harekete geçer, zararı en aza indirir ve Kişisel Verileri Koruma Kurulu’na bildirir.</p>
+          <h4>XIX. Politika Güncelleme</h4>
+          <p>Bu beyan üzerinde değişiklik yapma hakkı saklıdır. Önemli değişiklikler ana sayfada duyurulur. Beyanın en son güncellendiği tarih: 01.01.2020</p>
+          <h4>İletişim</h4>
+          <p>Gizlilik sözleşmesiyle ilgili sorularınız için iletişim sayfasında yer alan bilgileri kullanarak bize ulaşabilirsiniz.</p>
+          <p>Saygılarımızla<br>Liman Hukuk Bürosu</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Gizlilik Politikası -->
+    <div id="privacy" class="page">
+      <section>
+        <h2>Gizlilik Politikası</h2>
+        <div class="card" style="max-width: 900px; margin: 0 auto;">
+          <h3>Gizlilik ve Kişisel Verilerin Korunması</h3>
+          <p>
+            Liman Hukuk Bürosu olarak, web sitemizi ziyaret eden kullanıcıların gizliliğini korumak için gerekli tüm teknik ve idari tedbirleri almaktayız. Kişisel verileriniz, yalnızca hizmet sunumu ve yasal yükümlülükler kapsamında işlenir ve saklanır.
+          </p>
+          <ul>
+            <li><b>Toplanan Bilgiler:</b> Ad, soyad, iletişim bilgileri, hukuki talep ve başvurular, elektronik posta, telefon, adres vb.</li>
+            <li><b>Kullanım Amaçları:</b> Danışmanlık, randevu, iletişim, bilgilendirme, yasal yükümlülükler.</li>
+            <li><b>Çerezler:</b> Sitemizde kullanıcı deneyimini iyileştirmek için çerezler kullanılmaktadır. Çerezler, kişisel veri niteliğinde olmayıp, site kullanımını analiz etmek ve hizmet kalitesini artırmak amacıyla kullanılmaktadır.</li>
+            <li><b>Veri Güvenliği:</b> Kişisel verileriniz, yetkisiz erişime karşı koruma altındadır ve üçüncü kişilerle paylaşılmaz.</li>
+            <li><b>Haklarınız:</b> KVKK kapsamında, kişisel verilerinizin işlenmesine ilişkin bilgi talep etme, düzeltme, silme ve itiraz etme haklarına sahipsiniz.</li>
+            <li><b>İletişim:</b> Gizlilik ile ilgili sorularınız için <a href="mailto:omer.limon64@outlook.com">omer.limon64@outlook.com</a> adresinden bize ulaşabilirsiniz.</li>
+          </ul>
+          <p>
+            Detaylı bilgi için <a href="https://www.kvkk.gov.tr/" target="_blank">KVKK Resmi Sitesi</a>’ni ziyaret edebilirsiniz.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap; font-size:14px;">
+    <span>© 2025 Liman Hukuk Bürosu — Tüm hakları saklıdır. | <a href="#" onclick="showPage('kvkk')" style="color:#8a6a2a; text-decoration:underline;">KVKK Bildirgesi</a> | <a href="#" onclick="showPage('privacy')" style="color:#8a6a2a; text-decoration:underline;">Gizlilik Politikası</a></span>
+    <span style="margin-left:auto; font-weight:600; color:#0033aa;">Copyright © 2026 Berat ERTEK Tüm Hakları Saklıdır.</span>
+  </footer>
+  <script src="script.js" defer></script>
+    <script>
+      // Cookie Consent Bar Logic
+      (function() {
+        function setCookie(name, value, days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+        var bar = document.getElementById('cookieConsentBar');
+        var btn = document.getElementById('cookieConsentAccept');
+        if (!getCookie('cookieConsentAccepted')) {
+          bar.style.display = 'block';
+        }
+        if (btn) {
+          btn.onclick = function() {
+            setCookie('cookieConsentAccepted', 'yes', 365);
+            bar.style.display = 'none';
+          };
+        }
+      })();
+    </script>
+  
+</body>
+</html>
